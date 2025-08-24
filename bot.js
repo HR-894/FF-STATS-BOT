@@ -670,3 +670,18 @@ setInterval(() => {
 
 console.log('🚀 Free Fire Stats Telegram Bot is running!');
 console.log('Bot is completely independent and ready to serve users!');
+
+// ====== RENDER WEB SERVICE JUGAAD ====== //
+// Yeh code bot ko ek web service banata hai taaki free plan pe chal sake
+
+const http = require('http');
+const PORT = process.env.PORT || 3000;
+
+http.createServer((req, res) => {
+  res.writeHead(200, {'Content-Type': 'text/plain'});
+  res.write('Bot is alive!');
+  res.end();
+}).listen(PORT, () => {
+  console.log(`Server listening on port ${PORT}... Bot zinda hai!`);
+});
+// ======================================= //
